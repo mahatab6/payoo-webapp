@@ -18,7 +18,7 @@
                 <div class="flex items-center gap-2">
                     <img src="image/Group.png" alt="">
                     <div>
-                        <h2 class="font-extrabold text-2xl">$4500</h2>
+                        <h2 class="font-extrabold text-2xl">$ <span id="main-money">4500</span></h2>
                         <p>Available Balance</p>
                     </div>
                 </div>
@@ -37,11 +37,11 @@
         <section >
             <div class="cards mt-4 grid grid-cols-3 mx-4 gap-3">
 
-                <div class="box border-4 p-5 text-center"> 
+                <div id="add-money-box" class="box border-4 p-5 text-center"> 
                     <img class="mx-auto w-5 mb-1" src="image/Add Money.png" alt="">
                     <p>Add Money</p>
                 </div>
-                <div class="box border-4 p-5 text-center"> 
+                <div id="cash-out-box" class="box border-4 p-5 text-center"> 
                     <img class="mx-auto w-5 mb-1" src="image/Cashout.png" alt="">
                     <p>Cash out</p>
                 </div>
@@ -57,7 +57,7 @@
                     <img class="mx-auto w-5 mb-1" src="image/Pay Bill.png" alt="">
                     <p>Pay Bill</p>
                 </div>
-                <div class="box border-4 p-5 text-center"> 
+                <div id="transactions" class="box border-4 p-5 text-center"> 
                     <img class="mx-auto w-5 mb-1" src="image/Transactions.png" alt="">
                     <p>Transactions</p>
                 </div>
@@ -67,7 +67,7 @@
 
         <!-- Latest Payment -->
 
-        <section class="px-4 mt-6 ">
+        <section id="latest-pay" class="px-4 mt-6 ">
             <div class="flex justify-between">
                 <h1 class="font-semibold text-lg">Latest Payment</h1>
                 <p>View All</p>
@@ -129,7 +129,7 @@
         </section>
 
         <!-- Add Money section  -->
-        <section class="px-4 mt-6 ">
+        <section id="add-money" class="px-4 mt-6 ">
             <div>
                 <h2 class="font-semibold text-lg">Add Money</h2>
             </div>
@@ -154,13 +154,13 @@
                             <label class="label">
                               <span class="label-text text-xl font-medium">Bank Account Number</span>
                             </label>
-                            <input value="" id="pin-number" type="number" placeholder="Enter 11 digit account number" class="input input-bordered" required />
+                            <input value="01743643156" id="Account-number" type="number" placeholder="Enter 11 digit account number" class="input input-bordered" required />
                           </div>
                           <div class="form-control">
                             <label class="label">
                               <span class="label-text text-xl font-medium">Amount to Add</span>
                             </label>
-                            <input value="" id="pin-number" type="number" placeholder="Add Amount to withdraw" class="input input-bordered" required />
+                            <input value="" id="added-Money" type="number" placeholder="Add Amount to withdraw" class="input input-bordered" required />
                           </div>
                           <div class="form-control">
                             <label class="label">
@@ -169,7 +169,7 @@
                             <input value="1234" id="pin-number" type="number" placeholder="Enter 4 digit pin number" class="input input-bordered" required />
                           </div>
                           <div class="form-control mt-6">
-                            <button id="login-btn" class="btn btn-primary text-white text-xl rounded-2xl">Add Money</button>
+                            <button id="add-money-btn" class="btn btn-primary text-white text-xl rounded-2xl">Add Money</button>
                           </div>
                         </form>
                       </div>
@@ -179,8 +179,48 @@
 
         </section>
 
+        <!-- cash out -->
+        <section id="section-cash" class="px-4 mt-6 ">
+            <div>
+                <h2 class="font-semibold text-lg">Cash Out</h2>
+            </div>
+
+            <div>
+                <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                      <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text text-xl font-medium">Agent Number</span>
+                            </label>
+                            <input value="" id="" type="number" placeholder="Enter 11 digit number" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text text-xl font-medium">Amount</span>
+                            </label>
+                            <input value="" id="" type="number" placeholder="Enter amount to withdraw" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text text-3xl font-bold">Pin Number</span>
+                            </label>
+                            <input value="1234" id="" type="number" placeholder="Enter 4 digit pin number" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control mt-6">
+                            <button id="" class="btn btn-primary text-white text-xl rounded-2xl">Withdraw Money</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+
 
     </section>
-    
+    <script src="add-money.js"></script>
+    <script src="toggle.js"></script>
 </body>
 </html>
